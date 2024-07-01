@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My weather app</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      *{
+        font-family: Poppins,sans-serif;
+      }
+      .container-fluid{
+        background-color: lavender;
+      }
+      #about{
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+      }
+      nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(90, 90, 202);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(227, 46, 161);
+            font-size: 1.04rem;
+        }
+
+    </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Weather App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Popular Cities</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#home" id=" "> Delhi</a></li>
+              <li><a class="dropdown-item" href="#other">Mumbai</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#other">Chandigarh</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" >About</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+
+  <div class="container" id="Home">
+    <h1 class="my--4 text-center"> Weather for Delhi</h1>
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">Temperature</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">22<small class="text-body-secondary fw-light">°C</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Feels like 22°C</li>
+                <li>Max Temperature = 27°C</li>
+                <li>Min Temperature = 19°C</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">Sunsrise and Sunset</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">5:29 AM --- 7:29PM<small class="text-body-secondary fw-light">
+                </small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Sunrise Time = 5:29 AM</li>
+                <li>Sunset Time = 7:29 PM</li>
+                <li>Mostly Sunny</li>
+                <li> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">Humidity</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">50 <small class="text-body-secondary fw-light">%</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Humidity = 50%</li>
+                <li>Raing Chance =10%</li>
+                <li>Wind Speed =15 km/hr</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="display-6 text-center mb-4">Other Major Cities</h2>
+
+      <div class="table-responsive" id="other">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th style="width: 15%;"></th>
+              <th style="width: 22%;">Temperature</th>
+              <th style="width: 22%;">Sunsrise</th>
+              <th style="width: 22%;">Sunset</th>
+              <th style="width: 22%;">Humidity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-start">Mumbai</th>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">Banglore</th>
+              <td></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th scope="row" class="text-start">Chennai</th>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">Kolkatta</th>
+              <td></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">Gurgaon</th>
+              <td></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">Noida</th>
+              <td></td>
+              <td></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+              <td><svg class="bi" width="24" height="24">
+                  <use xlink:href="#check"></use>
+                </svg></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div><br><br><br>
+  <div class="container" id="about">
+    <h1> About </h1>
+      This app is the best weather app available over the Internet.
+      This app show 15 day forecast of the cities present at every corner of the world.
+      This weather app tells about the current weather conditions of all the cities known worldwide
+      The app tells about the maximum and minimum temperature.
+      The app tells about the humidity in the air.
+      The app also tells about the rain chances.
+      It also tells about the sunrise and sunset time. it also tells about the wind speed.  <br><br>
+</div>
+ <footer>
+    <nav>
+        <div class="left"> <font color="white" size="24px">myweather.com</font> </div>
+            <div class="right">
+                <ul>
+                  <li > <font color="white" size ="5px">Myweather101@gmail.com</font></li>
+                    <li><a href="#Contact Me"><font color="white" size="5px">Contact Me</font></a></li>
+                </ul>
+            </div>
+            </nav>
+ </footer>
+  </body>
+  </html>
